@@ -56,20 +56,20 @@ function deletePosts(){
     })
 }
 // 1st Section 
-createPosts({title:'Post Three', body:'This is post three'})
-.then(getPosts)
-.then(deletePosts)
-.then(getPosts)
-.then(deletePosts)
-.then(getPosts)
-.then(deletePosts)
-.then(getPosts)
-.then(deletePosts)
-.then(getPosts)
-.then(deletePosts)
-.catch((err)=>{
-    console.log(err)
-})
+// createPosts({title:'Post Three', body:'This is post three'})
+// .then(getPosts)
+// .then(deletePosts)
+// .then(getPosts)
+// .then(deletePosts)
+// .then(getPosts)
+// .then(deletePosts)
+// .then(getPosts)
+// .then(deletePosts)
+// .then(getPosts)
+// .then(deletePosts)
+// .catch((err)=>{
+//     console.log(err)
+// })
 
 //Promise.all
 const updateLastUserActivityTime=new Promise((resolve,reject)=>{
@@ -82,10 +82,35 @@ const updateLastUserActivityTime=new Promise((resolve,reject)=>{
 })
 
 // 2nd Section
-Promise.all([createPosts({title:'Post Four',body:'This is post four'}),updateLastUserActivityTime])
-.then((a)=>{
+// Promise.all([createPosts({title:'Post Four',body:'This is post four'}),updateLastUserActivityTime])
+// .then((a)=>{
+//     console.log('After Creating post Four')
+//     console.log('posts>>',a[0])
+//     console.log('User last Activity time',a[1])
+// })
+
+
+// async await
+async function myFunc1(){
+    try{
+    await createPosts({title:'Post Three', body:'This is post three'})
+    await getPosts()
+    await deletePosts()
+    await getPosts()
+    await deletePosts()
+    await getPosts()
+    await deletePosts()
+    await Promise.all([createPosts({title:'Post Four',body:'This is post four'}),updateLastUserActivityTime])
+    .then((a)=>{
     console.log('After Creating post Four')
     console.log('posts>>',a[0])
     console.log('User last Activity time',a[1])
 })
-
+    await deletePosts()
+    await deletePosts()
+}
+catch(e){
+    console.log(e)
+}
+}
+myFunc1()
