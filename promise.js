@@ -33,7 +33,6 @@ function createPosts(post){
     })
     
 }
-
 function create4thPosts(post){
     return new Promise((resolve,reject)=>{
         setTimeout(()=>{

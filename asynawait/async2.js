@@ -1,6 +1,5 @@
 console.log('person1: shows ticket')
 console.log('person2: shows ticket')
-
 const preMovie=async()=>{
     try{
     const promiseWifeBringingTicks=new Promise((resolve,reject)=>{
