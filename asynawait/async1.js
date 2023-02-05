@@ -1,6 +1,5 @@
 console.log('person1: shows ticket')
 console.log('person2: shows ticket')
-
 //using async
 const tic=async()=>{
     try{
