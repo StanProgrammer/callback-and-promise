@@ -1,6 +1,8 @@
 console.log('person1: shows ticket')
 console.log('person2: shows ticket')
 
+
+//using async
 const tic=async()=>{
     try{
     const promiseWifeBringingTicks=new Promise((resolve,reject)=>{
@@ -30,6 +32,8 @@ catch(e){
 }
 }
 tic().then((a)=>console.log(`${a}`))
+
+//using Promise 
 
 // const promiseWifeBringingTicks=new Promise((resolve,reject)=>{
 //     setTimeout(()=>{
