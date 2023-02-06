@@ -7,7 +7,6 @@ const user={
     name:'Atib',
     lastActivityTime:new Date()
 }
-// console.log(user.lastActivityTime)
 
 let intervalId=0
 function getPosts(){
